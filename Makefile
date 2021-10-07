@@ -2,7 +2,7 @@ CLUSTER_NAME = vault-csi-provider-demo
 
 GREEN=\033[0;32m
 
-.PHONY: create-cluster
+.PHONY: create-cluster setup-vault setup-secrets-store-csi-driver
 
 create-cluster:
 	@echo "$(GREEN) gcloud container clusters create $(CLUSTER_NAME) \n"
@@ -14,7 +14,7 @@ setup-vault:
 
 setup-secrets-store-csi-driver:
 	@echo "$(GREEN) $ ./scripts/setup-secrets-store-csi-driver.sh \n"
-	@ sh ./scripts/setup-secrets-store-csi-driver.sh
+	@sh ./scripts/setup-secrets-store-csi-driver.sh
 
 test:
 	@echo "$(GREEN) $ ./scripts/test.sh \n"
