@@ -6,6 +6,8 @@ GREEN=\033[0;32m
 
 create-cluster:
 	@echo "$(GREEN) gcloud container clusters create $(CLUSTER_NAME) \n"
+	@read -n 1 -s -r -p "Press any key to continue"
+	@echo "\n"
 	@gcloud container clusters create $(CLUSTER_NAME)
 
 setup-vault:
