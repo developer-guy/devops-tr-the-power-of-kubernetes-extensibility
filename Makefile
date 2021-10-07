@@ -14,7 +14,7 @@ setup-vault:
 
 setup-secrets-store-csi-driver:
 	@echo "$(GREEN) $ ./scripts/setup-secrets-store-csi-driver.sh \n"
-	@ sh ./scripts/setup-vault.sh
+	@ sh ./scripts/setup-secrets-store-csi-driver.sh
 
 test:
 	@echo "$(GREEN) $ ./scripts/test.sh \n"
