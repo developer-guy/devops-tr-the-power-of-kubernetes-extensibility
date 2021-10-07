@@ -20,7 +20,7 @@ helm install vault hashicorp/vault --create-namespace --namespace=vault \
 echo "\n"
 
 # Wait for Vault and Vault CSI Provider to become running
-echo "$YELLOW $ kubectl wait --for=condition=Ready=true pod -n vault -l \"app.kubernetes.io/name in (vault-csi-provider)\" \n"
+echo "$YELLOW $ kubectl wait --for=condition=Ready=true pod -n vault -l \"app.kubernetes.io/name in (vault, vault-csi-provider)\" \n"
 
 read -n 1 -s -r -p "Press any key to continue"
 
